@@ -1,0 +1,13 @@
+# PHP files (no longer needed)
+php/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Logs
+*.log
