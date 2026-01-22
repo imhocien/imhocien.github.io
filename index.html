@@ -3501,53 +3501,47 @@
                     setTimeout(function() {
                         var data = getProjects();
                         
-                        if (true) {
-                            if (data.success && data.projects) {
-                                data.projects.forEach(function (project) {
-                                    var projectHTML =
-                                        '<div class="col-12 load-more-item">' +
-                                        '<div class="row single-portfolio position-relative theme-border-top align-items-center">' +
-                                        '<div class="col-xl-2 col-lg-2 col-md-7 col-sm- col-">' +
-                                        '<div class="port-category"><span class="meta-text-color text-uppercase">' +
-                                        project.category +
-                                        '</span></div>' +
-                                        '</div>' +
-                                        '<div class="col-xl-5 col-lg-5 col-md-6 col-sm- col- pl-lg-0">' +
-                                        '<h3>' +
-                                        project.title +
-                                        '</h3>' +
-                                        '</div>' +
-                                        '<div class="col-xl-5 col-lg-5 col-md-6 col-sm- col- d-flex justify-content-end align-items-center">' +
-                                        '<img class="port-img position-absolute left-0 ml-xl-3 transition5" src="' +
-                                        project.image +
-                                        '" alt="' +
-                                        project.alt +
-                                        '" title="' +
-                                        project.imageTitle +
-                                        '" loading="lazy" />' +
-                                        '<a target="_blank" rel="nofollow noopener noreferrer" href="' +
-                                        project.url +
-                                        '" class="port-content text-center transition5 z-index11" title="' +
-                                        project.linkTitle +
-                                        '"><span class="d-inline-block"><i class="fas fa-link"></i></span></a>' +
-                                        '</div>' +
-                                        '</div>' +
-                                        '</div>';
+                        if (data.success && data.projects) {
+                            data.projects.forEach(function (project) {
+                                var projectHTML =
+                                    '<div class="col-12 load-more-item">' +
+                                    '<div class="row single-portfolio position-relative theme-border-top align-items-center">' +
+                                    '<div class="col-xl-2 col-lg-2 col-md-7 col-sm- col-">' +
+                                    '<div class="port-category"><span class="meta-text-color text-uppercase">' +
+                                    project.category +
+                                    '</span></div>' +
+                                    '</div>' +
+                                    '<div class="col-xl-5 col-lg-5 col-md-6 col-sm- col- pl-lg-0">' +
+                                    '<h3>' +
+                                    project.title +
+                                    '</h3>' +
+                                    '</div>' +
+                                    '<div class="col-xl-5 col-lg-5 col-md-6 col-sm- col- d-flex justify-content-end align-items-center">' +
+                                    '<img class="port-img position-absolute left-0 ml-xl-3 transition5" src="' +
+                                    project.image +
+                                    '" alt="' +
+                                    project.alt +
+                                    '" title="' +
+                                    project.imageTitle +
+                                    '" loading="lazy" />' +
+                                    '<a target="_blank" rel="nofollow noopener noreferrer" href="' +
+                                    project.url +
+                                    '" class="port-content text-center transition5 z-index11" title="' +
+                                    project.linkTitle +
+                                    '"><span class="d-inline-block"><i class="fas fa-link"></i></span></a>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</div>';
 
-                                    portfolioList.insertAdjacentHTML("beforeend", projectHTML);
-                                });
+                                portfolioList.insertAdjacentHTML("beforeend", projectHTML);
+                            });
 
-                                loaded = true;
-                                button.classList.add("d-none");
-                            } else {
-                                button.textContent = "Failed to load";
-                            }
-                        })
-                        .catch(function (error) {
-                            console.error("Error loading projects:", error);
+                            loaded = true;
+                            button.classList.add("d-none");
+                        } else {
                             button.textContent = "Failed to load";
-                            button.disabled = false;
-                        });
+                        }
+                    }, 500);
                 });
             })();
         </script>
