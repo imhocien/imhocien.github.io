@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /wp-admin
+Disallow: /wp-includes
+Disallow: /wp-content/plugins
+Disallow: /wp-content/themes
+
+# Crawl delay (optional, in seconds)
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://hocien.com/sitemap.xml
