@@ -13287,6 +13287,36 @@ a.meanmenu-reveal {
   }
 }
 
+/* XS Extra Small Devices - Better mobile typography */
+@media screen and (max-width: 499px) {
+  .slider-content h1 {
+    font-size: 48px !important;
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+  .slider-content .sub-heading {
+    font-size: 16px !important;
+    letter-spacing: 3px;
+  }
+  .slider-content h2 {
+    font-size: 18px !important;
+  }
+  .slider-content h2 span {
+    font-size: 22px !important;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .slider-content h1 {
+    font-size: 38px !important;
+    line-height: 1.1;
+  }
+  .slider-content .sub-heading {
+    font-size: 14px !important;
+    letter-spacing: 2px;
+  }
+}
+
 /* ===== style.css ===== */
 /*
   Theme Name: Thames - Portfolio NuxtJS template
